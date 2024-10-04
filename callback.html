@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Task</title>
+</head>
+<body>
+    
+
+
+
+
+<script>
+
+    function calculate(num1, num2, callback) {
+        return callback(num1, num2);
+    }
+    
+    //addition
+    function add(a, b) {
+        return a + b;
+    }
+    
+    //  subtraction
+    function subtract(a, b) {
+        return a - b;
+    }
+    
+    //  multiplication
+    function multiply(a, b) {
+        return a * b;
+    }
+    
+    // division
+    function divide(a, b) {
+        if (b === 0) {
+            return 'Error: Division by zero';
+        }
+        return a / b;
+    }
+    
+    // Example usage
+    const num1 = 20;
+    const num2 = 4;
+    
+    console.log('Addition:', calculate(num1, num2, add));        
+    console.log('Subtraction:', calculate(num1, num2, subtract)); 
+    console.log('Multiplication:', calculate(num1, num2, multiply)); 
+    console.log('Division:', calculate(num1, num2, divide));      
+    </script>
+</body>
+</html>
